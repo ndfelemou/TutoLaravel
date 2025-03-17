@@ -1,0 +1,16 @@
+Notion de Query Builder
+Pour effectuer sa propre requette on peut proceder par plusieurs manieres
+
+1. $post = Post::where('id', '>', 0)->get() => Pour recupere tous les articles ayant l'id > a 0
+2. $post = Post::where('id', '>', 0)->first() => Pour recupere l'article ayant l'id > a 0
+
+Lors de l'enregistrement avec les tableaux par exemple
+$post = Post::create([
+    'title' => 'Mon Titre',
+    'slug' => 'mon-titre',
+    'content' => 'Mon Contenu',
+]);
+
+Il faut placer les champs remplissables dans le (protected $fillables = [];)
+
+Et si c'est le contraire il faut placer les champs nom remplissables dans le (protected $guarded = [];)

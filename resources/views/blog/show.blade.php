@@ -7,7 +7,8 @@
     <div class="bg-body-tertiary p-4 rounded">
         <h1>Details liés à un article</h1>
         <p class="lead">Dans cette partie vous retrouverez tous les détails liées à un
-            <a href="{{ route('blog.index') }}" class="font-weight-bolder text-primary">article</a>.
+            <a href="{{ route('blog.index') }}" class="font-weight-bolder text-primary"
+                title="Retourner sur le blog">article</a>.
         </p>
         {{-- <a class="btn btn-sm btn-primary" href="/docs/5.3/components/navbar/" role="button">Les articles</a> --}}
     </div>
@@ -25,7 +26,8 @@
                 <div class="card-body">
                     <p>{{ $post->content }}</p>
 
-                    <a href="{{ route('blog.index') }}" class="btn btn-sm btn-outline-primary">Retour à l'accueil</a>
+                    <a href="{{ route('blog.edit', $post->id) }}" class="btn btn-sm btn-success">Modifier
+                        l'article</a>
                 </div>
             </div>
         </div>

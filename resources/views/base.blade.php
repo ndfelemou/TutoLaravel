@@ -22,7 +22,7 @@
 
     <nav class="navbar navbar-expand-lg navbar-dark bg-primary fixed-top mb-4">
         <div class="container-fluid">
-            <a class="navbar-brand" href="/">Blog</a>
+            <a class="navbar-brand" href="/"><strong>LaravBlog</strong></a>
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse"
                 aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
@@ -33,6 +33,13 @@
                         <a @class(['nav-link', 'active' => str_starts_with($routeName, 'blog.')]) aria-current="page" href="{{ route('blog.index') }}">Accueil</a>
                     </li>
                     <li class="nav-item">
+                        <a @class([
+                            'nav-link',
+                            'active' => str_starts_with($routeName, 'blog.create'),
+                        ]) aria-current="page" href="{{ route('blog.create') }}">Créer un
+                            article</a>
+                    </li>
+                    <li class="nav-item">
                         <a class="nav-link" href="#">Link</a>
                     </li>
                 </ul>
@@ -41,6 +48,15 @@
     </nav>
 
     <div class="container">
+
+        <div class="row">
+            @if (session('success'))
+                <div class="alert alert-success">
+                    {{ session('success') }}
+                </div>
+            @endif
+        </div>
+
         @yield('content')
     </div>
 

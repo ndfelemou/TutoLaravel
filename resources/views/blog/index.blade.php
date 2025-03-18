@@ -7,7 +7,7 @@
     <div class="bg-body-tertiary p-4 rounded">
         <h1>Mon Blog</h1>
         <p class="lead">Dans cette partie vous retrouverez tous les articles liées à notre
-            <span class="font-weight-bolder text-primary">Blog</span>.
+            <a href="{{ route('blog.index') }}" class="link font-weight-bolder text-primary">Blog</a>.
         </p>
         {{-- <a class="btn btn-sm btn-primary" href="/docs/5.3/components/navbar/" role="button">Les articles</a> --}}
     </div>

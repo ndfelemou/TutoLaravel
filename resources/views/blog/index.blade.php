@@ -21,12 +21,12 @@
             <div class="col-md-4 col-sm-12 col-lg-3 mt-2">
                 <div class="card rounded-1">
                     <div class="card-header">
-                        <h5 class="card-title">{{ $post->title }}</h5>
+                        <h5 class="card-title font-bold">{{ $post->title }}</h5>
                     </div>
                     <div class="card-body">
                         <p>{{ $post->content }}</p>
 
-                        <a href="{{ route('blog.show', ['slug' => $post->slug, 'id' => $post->id]) }}"
+                        <a href="{{ route('blog.show', ['slug' => $post->slug, 'post' => $post->id]) }}"
                             class="btn btn-sm btn-outline-primary">Lire la suite</a>
                     </div>
                 </div>

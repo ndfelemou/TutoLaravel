@@ -14,3 +14,21 @@ $post = Post::create([
 Il faut placer les champs remplissables dans le (protected $fillables = [];)
 
 Et si c'est le contraire il faut placer les champs nom remplissables dans le (protected $guarded = [];)
+
+
+// $category = Category::find(1);
+// $post = Post::find(10);
+
+// $category->posts()->where('id', '>', 10)->get();
+// $post->category()->associate($category);
+// $post->save();
+
+
+============ Lors qu'on a besoin d'attacher ou de dettacher un ou des elements a un element on peut utiliser la methode
+1. attache
+2. dettache 
+3. sync
+
+================= Exercice ================
+1. Avoir une page pour lister tous les articles ayant la meme categorie
+2. Avoir une page pour lister tous les articles ayant la meme tags
